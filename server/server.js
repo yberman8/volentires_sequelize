@@ -21,20 +21,6 @@ export default function server() {
    PirsumimDB.belongsTo(AmutotDB);
 
    sequelize.sync().then(async (results) => {
-      //    const users = await PirsumimDB.findAll({
-      //       include: AmutotDB,
-      //   });
-      //   console.log(users.amutot);
-      // await PirsumimDB.destroy({
-      //    where: {
-      //      id_pirsum: 5,
-      //      amuta_id: 37
-      //    }
-      // })
-      const jane = await PirsumimDB.create({ title: "4444yrggrrrghrhthttrtr", content: "ht" ,pick_up_address:"45",zone:"43",text_finish:"grgr",picture:null,
-      status_pirsum:"פעילים",pirsum_show_phone:1,pirsum_show_whatsapp:1,pirsum_show_email:1,amuta_id:22});
-      console.log("Jane's auto-generated ID:", jane.id_pirsum);
-
    });
 
    const app = express();
@@ -66,18 +52,3 @@ export default function server() {
 
 }
 
-// const https = require("https");
-// const fs = request("fs");
-
-// https.createServer(
-// 		// Provide the private and public key to the server by reading each
-// 		// file's content with the readFileSync() method.
-//     {
-//       key: fs.readFileSync("key.pem"),
-//       cert: fs.readFileSync("cert.pem"),
-//     },
-//     app
-//   )
-//   .listen(4000, () => {
-//     console.log("serever is runing at port 4000");
-//   });
